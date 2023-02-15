@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:logbook_generator/widgets/links_container.dart';
+import 'package:logbook_generator/widgets/shortlinks/links_container.dart';
 
 class Shortlinks extends StatefulWidget {
   const Shortlinks({super.key});
