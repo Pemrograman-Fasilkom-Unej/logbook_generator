@@ -10,7 +10,14 @@ class Shortlinks extends StatefulWidget {
 
 class _ShortlinksState extends State<Shortlinks> {
 
-  final List links = ['Test1','Test2','Test3','Test4','Test5','Test6',];
+  final List links = [
+      {'nama':'nama1','shortlink':'shortlink1','link':'link1'},
+      {'nama':'nama2','shortlink':'shortlink2','link':'link2'},
+      {'nama':'nama3','shortlink':'shortlink3','link':'link3'},
+      {'nama':'nama4','shortlink':'shortlink4','link':'link4'},
+      {'nama':'nama5','shortlink':'shortlink5','link':'link5'},
+      {'nama':'nama6','shortlink':'shortlink6','link':'link6'}
+    ];
   
   @override
   Widget build(BuildContext context) {
@@ -34,7 +41,11 @@ class _ShortlinksState extends State<Shortlinks> {
         child: ListView.builder(
           itemCount: links.length,
           itemBuilder: (context, index) {
-            return LinksContainer(nama: links[index],shortlink: links[index],link_asli: links[index]);
+            return LinksContainer(
+              nama: links[index]['nama'],
+              shortlink: links[index]['shortlink'],
+              link_asli: links[index]['link']
+            );
         }
         )
       ),

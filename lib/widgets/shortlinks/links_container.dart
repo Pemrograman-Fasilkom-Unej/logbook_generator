@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class LinksContainer extends StatelessWidget {
   final nama;
@@ -48,8 +49,8 @@ class LinksContainer extends StatelessWidget {
           Expanded(
               child: IconButton(
                   color: const Color(0xFF9693A6),
-                  onPressed: () {
-                    
+                  onPressed: () async {
+                    await Clipboard.setData(ClipboardData(text: 'test'));
                   },
                   icon: Icon(Icons.copy)))
         ],
